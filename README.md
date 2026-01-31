@@ -1,2 +1,6 @@
 # CodingStudy_C
-This page is C language coding study space.
+이 레포는 프로그래머스와 백준 사이트에서 직접 풀이한 코딩 문제들을 커밋한 레포입니다.
+
+사용언어 : C
+
+각 문제의 난이도에 대한 등급과 풀이한 사이트별로 디렉토리가 나누어져 있습니다.
