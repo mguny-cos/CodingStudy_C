@@ -36,3 +36,36 @@
 
  <p>첫째 줄에 게임의 상금을 출력 한다.</p>
 
+### 오답 정리
+
+문제 자체의 풀이엔 문제가 없었으나 쓸데없는 수의 비교가 너무 많았음. 
+아래의 코드는 제미나이에게 코드 간략화 시켜달라 한 후 받아온 코드.
+
+'''C
+#include <stdio.h>
+
+int main() {
+    int a, b, c, prize;
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a == b && b == c) {
+        // 1. 세 눈이 모두 같은 경우
+        prize = 10000 + a * 1000;
+    } else if (a == b || a == c) {
+        // 2. 두 눈이 같은 경우 (a가 포함된 경우)
+        prize = 1000 + a * 100;
+    } else if (b == c) {
+        // 3. 두 눈이 같은 경우 (b와 c가 같은 경우)
+        prize = 1000 + b * 100;
+    } else {
+        // 4. 모두 다른 경우 (가장 큰 값 찾기)
+        int max = a;
+        if (b > max) max = b;
+        if (c > max) max = c;
+        prize = max * 100;
+    }
+
+    printf("%d", prize);
+    return 0;
+}
+'''
